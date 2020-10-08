@@ -17,10 +17,28 @@ main {
   .container {
     max-width: fit-content;
     max-height: fit-content;
-    min-width: 30em;
+    min-width: 28em;
     text-transform: capitalize;
     text-align: center;
-    position: relative;
+          position: relative;
+          background-color: rgb(207, 207, 207);
+          padding: 1em;
+          @include mboxshadow(1);
+          border-radius: 4px;
+    .title{
+     width: 100%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     .underline{
+      width: 45px;
+      height: 5px;
+      background-color: gray;
+      margin-bottom: 2.5em;
+     }
+    }
     .img-container {
       width: 30vw;
       max-width: 35vmin;
@@ -32,7 +50,7 @@ main {
       align-items: center;
       justify-content: center;
       box-shadow: 16px -9px 0px -3px rgba(162, 157, 154, 1);
-      &:before {
+      &:after {
         font-family: "Font Awesome 5 Free";
         content: "\f10e";
         font-weight: 900;
@@ -42,8 +60,8 @@ main {
         border-radius: 50%;
         background-color: #a29d9a;
         position: absolute;
-        left: 10rem;
-        top: 4rem;
+        left: 28%;
+        top: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,7 +70,6 @@ main {
         width: 43vw;
         max-width: 50vmin;
         max-height: fit-content;
-        
       }
     }
   }
