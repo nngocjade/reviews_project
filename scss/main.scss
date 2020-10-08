@@ -37,13 +37,13 @@ main {
         content: "\f10e";
         font-weight: 900;
         color: rgb(245, 228, 206);
-        width: 5vmin;
-        height: 5vh;
+        min-height: 2rem;
+        min-width: 2rem;
         border-radius: 50%;
         background-color: #a29d9a;
         position: absolute;
-        left: 25px;
-        top: 75px;
+        left: 10rem;
+        top: 4rem;
         display: flex;
         justify-content: center;
         align-items: center;
