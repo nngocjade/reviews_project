@@ -19,17 +19,17 @@ main {
   text-transform: capitalize;
   text-align: center;
   .img-container {
-    width: 40vw;
-    height: 54vh;
+    width: 20em;
+    height: 20em;
     margin: auto;
     overflow: hidden;
     border-radius: 50%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     @include mboxshadow(3);
     img {
-      width: 60vw;
+      width: 30em;
     }
   }
 }
