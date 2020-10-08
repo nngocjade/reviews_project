@@ -14,22 +14,41 @@ body {
 }
 
 main {
-  width: 70vh;
-  height: 70vh;
-  text-transform: capitalize;
-  text-align: center;
-  .img-container {
-    width: 20em;
-    height: 20em;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include mboxshadow(3);
-    img {
-      width: 30em;
+  .container {
+    width: 70vh;
+    height: 70vh;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    .img-container {
+      width: 20em;
+      height: 20em;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 16px -9px 0px -3px rgba(162, 157, 154, 1);
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f10e";
+        font-weight: 900;
+        color: rgb(245, 228, 206);
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        background-color: #a29d9a;
+        position: absolute;
+        left: 25px;
+        top: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        width: 30em;
+      }
     }
   }
 }
