@@ -13,6 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(207, 207, 207);
 }
 
 main {
@@ -44,6 +45,7 @@ main {
       padding: 1.5em;
       @include mboxshadow(1);
       border-radius: 4px;
+      background-color: lighten($color: #f5e4ce, $amount: 9%);
       .img-container {
         width: 30vw;
         max-width: 35vmin;
@@ -77,6 +79,12 @@ main {
           max-height: fit-content;
         }
       }
+      #job{
+       color: #a29d9a;
+      }
+      #info {
+        color: darken($color: #a29d9a, $amount: 30%);
+      }
       button {
         background-color: transparent;
         padding: 0.5em;
@@ -85,12 +93,21 @@ main {
       }
       .button-container {
         margin-bottom: 1em;
-        .prev-btn{
-         border: none;
-         i{
-          size: 2em;
-         }
+        .prev-btn {
+          border: none;
+          i {
+            width: 0.8em;
+            color: #a29d9a;
+          }
         }
+      }
+      .random-btn {
+        border: 2px solid #a29d9a;
+        border-radius: 10px;
+        color: #a29d9a;
+        font-weight: 600;
+        text-transform: capitalize;
+        background-color: lighten($color: #f5e4ce, $amount: 5%);
       }
     }
   }
