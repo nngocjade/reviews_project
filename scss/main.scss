@@ -13,14 +13,14 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgb(207, 207, 207);
+  background-color: lighten($color: rgb(207, 207, 207), $amount: 5%);
 }
 
 main {
   .container {
     max-width: fit-content;
     max-height: fit-content;
-    min-width: 28em;
+    min-width: 28rem;
     text-transform: capitalize;
     text-align: center;
     .title {
@@ -30,10 +30,14 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      h2 {
+        font-size: 2rem;
+        color: darken($color: #a29d9a, $amount: 30%);
+      }
       .underline {
         width: 45px;
         height: 5px;
-        background-color: gray;
+        background-color: #a29d9a;
         margin-bottom: 2.5em;
       }
     }
@@ -62,13 +66,13 @@ main {
           content: "\f10e";
           font-weight: 900;
           color: rgb(245, 228, 206);
-          min-height: 2rem;
-          min-width: 2rem;
+          height: 2.5em;
+          width: 2.5em;
           border-radius: 50%;
           background-color: #a29d9a;
           position: absolute;
-          left: 33%;
-          top: 8%;
+          left: 7em;
+          top: 3em;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -79,8 +83,11 @@ main {
           max-height: fit-content;
         }
       }
-      #job{
-       color: #a29d9a;
+      #author {
+        color: darken($color: #a29d9a, $amount: 30%);
+      }
+      #job {
+        color: #a29d9a;
       }
       #info {
         color: darken($color: #a29d9a, $amount: 30%);
@@ -98,6 +105,9 @@ main {
           i {
             width: 0.8em;
             color: #a29d9a;
+            &:hover {
+              color: lighten($color: #a29d9a, $amount: 15%);
+            }
           }
         }
       }
@@ -107,7 +117,10 @@ main {
         color: #a29d9a;
         font-weight: 600;
         text-transform: capitalize;
-        background-color: lighten($color: #f5e4ce, $amount: 5%);
+        background-color: lighten($color: rgb(245, 228, 206), $amount: 5%);
+        &:hover {
+          background-color: rgb(245, 228, 206);
+        }
       }
     }
   }
