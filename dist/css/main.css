@@ -160,16 +160,19 @@ main .container .review .button-container {
   margin-bottom: 1em;
 }
 
-main .container .review .button-container .prev-btn {
+main .container .review .button-container .prev-btn,
+main .container .review .button-container .next-btn {
   border: none;
 }
 
-main .container .review .button-container .prev-btn i {
+main .container .review .button-container .prev-btn i,
+main .container .review .button-container .next-btn i {
   width: 0.8em;
   color: #a29d9a;
 }
 
-main .container .review .button-container .prev-btn i:hover {
+main .container .review .button-container .prev-btn i:hover,
+main .container .review .button-container .next-btn i:hover {
   color: #c7c4c2;
 }
 

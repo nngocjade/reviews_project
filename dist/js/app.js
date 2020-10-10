@@ -1,10 +1,10 @@
 //local reviews data
-const review = [
+const reviews = [
   {
     id: 1,
     name: "Birdy",
     job: "Fly",
-    img: "ClonedToGithubdistimg\bird-1045954_640.jpg",
+    img: "dist\img\bird-1045954_640.jpg",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati voluptatum, quod tempore minus eos hic facere, optio odit cum saepe nulla ducimus, laborum error perspiciatis architecto distinctio aliquam doloremque.",
   },
@@ -12,7 +12,7 @@ const review = [
     id: 2,
     name: "Pelican",
     job: "Hunt",
-    img: "ClonedToGithubdistimgpelican-5218855_640.jpg",
+    img: "dist\img\pelican-5218855_640.jpg",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati voluptatum, quod tempore minus eos hic facere, optio odit cum saepe nulla ducimus, laborum error perspiciatis architecto distinctio aliquam doloremque.",
   },
@@ -20,7 +20,7 @@ const review = [
     id: 3,
     name: "Kitty Kat",
     job: "Purr",
-    img: "ClonedToGithubdistimgcat-5625168_640.jpg",
+    img: "dist\img\cat-5625168_640.jpg",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati voluptatum, quod tempore minus eos hic facere, optio odit cum saepe nulla ducimus, laborum error perspiciatis architecto distinctio aliquam doloremque.",
   },
@@ -29,7 +29,7 @@ const review = [
     id: 4,
     name: "Migratory Birds",
     job: "Dance in the Sky",
-    img: "ClonedToGithubdistimgmigratory-birds-5242969_640.jpg",
+    img: "dist\img\migratory-birds-5242969_640.jpg",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati voluptatum, quod tempore minus eos hic facere, optio odit cum saepe nulla ducimus, laborum error perspiciatis architecto distinctio aliquam doloremque.",
   },
@@ -46,9 +46,10 @@ const nextBtn = document.querySelector(".next-btn");
 const randomBtn = document.querySelector(".random-btn");
 
 // set starting item
-let currentItem = 0;
+let currentItem = 2;
 
 // load initial item
 window.addEventListener("DOMContentLoaded", function () {
-  console.log("shake and bake");
+  const item = reviews[currentItem];
+  img.src = item.img;
 });

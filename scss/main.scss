@@ -100,7 +100,8 @@ main {
       }
       .button-container {
         margin-bottom: 1em;
-        .prev-btn {
+        .prev-btn,
+        .next-btn {
           border: none;
           i {
             width: 0.8em;
