@@ -4,7 +4,7 @@ const reviews = [
     id: 1,
     name: "Birdy",
     job: "Fly",
-    img: "dist\img\bird-1045954_640.jpg",
+    img: 'dist\img\bird-1045954_640.jpg',
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati voluptatum, quod tempore minus eos hic facere, optio odit cum saepe nulla ducimus, laborum error perspiciatis architecto distinctio aliquam doloremque.",
   },
@@ -46,10 +46,13 @@ const nextBtn = document.querySelector(".next-btn");
 const randomBtn = document.querySelector(".random-btn");
 
 // set starting item
-let currentItem = 2;
+let currentItem = 0;
 
 // load initial item
 window.addEventListener("DOMContentLoaded", function () {
   const item = reviews[currentItem];
   img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
 });
