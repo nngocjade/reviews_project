@@ -4,7 +4,7 @@ const reviews = [
     id: 1,
     name: "Birdy",
     job: "Fly",
-    img: "dist/img/bird-1045954_640.jpg",
+    img: "./img/cat-5337501_640.jpg",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati voluptatum, quod tempore minus eos hic facere, optio odit cum saepe nulla ducimus, laborum error perspiciatis architecto distinctio aliquam doloremque.",
   },
@@ -12,31 +12,31 @@ const reviews = [
     id: 2,
     name: "Pelican",
     job: "Hunt",
-    img: "dist/img/pelican-5218855_640.jpg",
+    img: "./img/pelican-5218855_640.jpg",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati voluptatum, quod tempore minus eos hic facere, optio odit cum saepe nulla ducimus, laborum error perspiciatis architecto distinctio aliquam doloremque.",
   },
   {
     id: 3,
     name: "Kitty Kat",
-    job: "Purr",
-    img: "dist/img/cat-5625168_640.jpg",
+    job: "Look Pretty",
+    img: "./img/cat-5625168_640.jpg",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati voluptatum, quod tempore minus eos hic facere, optio odit cum saepe nulla ducimus, laborum error perspiciatis architecto distinctio aliquam doloremque.",
   },
 
   {
     id: 4,
-    name: "Migratory Birds",
-    job: "Dance in the Sky",
-    img: "dist/img/migratory-birds-5242969_640.jpg",
+    name: "Heron",
+    job: "Model",
+    img: "./img/heron-5394026_640.jpg",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati voluptatum, quod tempore minus eos hic facere, optio odit cum saepe nulla ducimus, laborum error perspiciatis architecto distinctio aliquam doloremque.",
   },
 ];
 
 // select items
-const img = document.getElementById("person-img");
+const img = document.getElementById("animal-img");
 const author = document.getElementById("author");
 const job = document.getElementById("job");
 const info = document.getElementById("info");
@@ -50,42 +50,42 @@ let currentItem = 0;
 
 // load initial item
 window.addEventListener("DOMContentLoaded", function () {
- showPerson();
+  showAnimal();
 });
 
-//show person based on item
-function showPerson(){
-   const item = reviews[currentItem];
+//show animal based on item
+function showAnimal() {
+  const item = reviews[currentItem];
   img.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
 }
 
-//show next person
+//show next animal
 
-nextBtn.addEventListener('click', function(){
+nextBtn.addEventListener('click', function () {
   currentItem++;
-  if(currentItem > reviews.length - 1){
+  if (currentItem > reviews.length - 1) {
     currentItem = 0;
   }
-showPerson();
+  showAnimal();
 });
 
-//show prev person
+//show prev animal
 
-prevBtn.addEventListener('click', function(){
+prevBtn.addEventListener('click', function () {
   currentItem--;
-  if(currentItem < 0){
+  if (currentItem < 0) {
     currentItem = reviews.length - 1;
   }
-  showPerson();
+  showAnimal();
 });
 
-// show random person
+// show random animal
 
-randomBtn.addEventListener('click', function(){
+randomBtn.addEventListener('click', function () {
   currentItem = Math.floor(Math.random() * reviews.length);
   console.log(currentItem);
-  showPerson();
+  showAnimal();
 })
